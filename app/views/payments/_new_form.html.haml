@@ -1,0 +1,51 @@
+%h2 Make a Purchase
+= form_for(@payment, html: {'data-parsley-validate' => true}) do |f|
+  - if @payment.errors.any?
+    #error_explanation
+      %h6
+        = pluralize(@payment.errors.count, "error")
+        prohibited this payment from being saved:
+      %ul
+        - @payment.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.text_field :title, class: 'form-control', placeholder: 'Name of Product/Service'
+  .field
+    %br/
+    %div{class: "input-group"}
+      %span{class: "input-group-addon"} BTC
+      = f.text_field :price, class: "form-control", placeholder: 'Price', required: true, 'data-parsley-min' => 0.5*@rates['usd_to_btc'].to_f, 'data-parsley-max' => 0.07921921541289
+      %span#equivalent_usd_value{class: "input-group-addon"}= @payment.price ? "$#{((@payment.price.to_f/@rates['usd_to_btc'].to_f)*1.06).round(2)}" : ''
+    %br/
+  .field
+    = f.text_field :bitcoin_address, required: true, class: 'form-control', placeholder: 'Bitcoin Address of merchant'
+  - if not current_user.last_4
+    %br/
+    %div{style: "position: relative;left: 50%;"}
+      = render 'skeuocard'
+  %br/
+  .actions
+    %button{class: "btn btn-primary btn-block ladda-button", type: 'submit', data: {style: "slide-left"}}
+      %span{class: "ladda-label"} Buy
+
+:javascript
+  $(window).ready(function(){
+    var $skeuocard = $("#skeuocard");
+    if($skeuocard.length > 0){
+      new Skeuocard($("#skeuocard"));
+    }
+  });
+  var usd_to_btc = gon.rates['usd_to_btc'];
+  $('#payment_price').on('keyup', function (e) {
+    var amount = parseFloat(e.target.value);
+    if(amount){
+      var cost = amount/usd_to_btc*1.06;
+      $('#equivalent_usd_value').text('$'+cost.toFixed(2));
+    }else{
+      $('#equivalent_usd_value').text('');
+    }
+  });
+  var ladda = Ladda.create( document.querySelector( '[type=submit]' ) )
+  $.listen("parsley:field:error", function(){
+    ladda.stop();
+  })

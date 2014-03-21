@@ -1,0 +1,20 @@
+%div{class: "panel panel-primary"}
+  %div{class: "panel-heading"}
+    %h3{class: "panel-title"}
+      Purchases
+  %div{class: "panel-body"}
+    %ul.list-group
+      - @payments.each do |payment|
+        %li.list-group-item{style: "margin-bottom: 0x; background-color: none; border: none;"}
+          %a.price{data: {toggle: "tooltip", placement: "top"}, title: "BTC #{payment.price}"}
+            $#{(payment.price/payment.exchange_rate).round(2)}
+          %span.title{data: payment.description ? {toggle: "tooltip", placement: "top"} : {}, title: payment.description}
+            = payment.title
+          %span{class: 'badge badge-default'}>= link_to 'Edit', edit_payment_path(payment)
+%br/
+%a{href: new_payment_path, style: "color: white;"}
+  %button{class: 'btn btn-orange btn-block'}
+    Make a Purchase
+
+:javascript
+  $('[data-toggle="tooltip"]').tooltip();

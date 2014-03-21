@@ -1,0 +1,28 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: nevercoin_development
+  pool: 5
+  username: root
+  password: root
+  timeout: 5000
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: nevercoin_test
+  pool: 5
+  username: root
+  password: root
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: d28g08dnntq3j8
+  host: ENV['DATABASE_HOST']
+  port: 5432
+  pool: 5
+  username: ENV['DATABASE_USERNAME']
+  password: ENV['DATABASE_PASSWORD']
+  timeout: 5000

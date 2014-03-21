@@ -1,0 +1,6 @@
+%div{class: 'navbar navbar-default navbar-custom'}
+  .container
+    %div{class: 'navbar-header', style: "height: 20px; width: 100%"}
+      %h4{style: 'float: left;'}
+        = link_to 'NeverCoin', payments_path, style: "color: black;"
+      = render "devise/shared/links", locals: {topbar: true}

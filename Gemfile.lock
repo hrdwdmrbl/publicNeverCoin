@@ -1,0 +1,326 @@
+GIT
+  remote: https://github.com/jackquack/active_model_serializers.git
+  revision: 2d7dc0d7731fbc7c780073cda183555413715941
+  branch: 0-8-stable
+  specs:
+    active_model_serializers (0.8.4)
+      activemodel (>= 3.0)
+
+GIT
+  remote: https://github.com/jackquack/cancan.git
+  revision: a50c41b9dbef970c3fe7f90de0a82a2dce8a0428
+  specs:
+    cancan (1.6.11)
+
+GIT
+  remote: https://github.com/jackquack/cloud_assets.git
+  revision: 508fc9b3f0edd9c305bc5c29d711d34ac5b42799
+  specs:
+    cloud_assets (0.0.5)
+      dalli
+      nokogiri
+      typhoeus
+
+GEM
+  remote: https://rubygems.org/
+  remote: https://code.stripe.com/
+  specs:
+    actionmailer (4.0.3)
+      actionpack (= 4.0.3)
+      mail (~> 2.5.4)
+    actionpack (4.0.3)
+      activesupport (= 4.0.3)
+      builder (~> 3.1.0)
+      erubis (~> 2.7.0)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    activemodel (4.0.3)
+      activesupport (= 4.0.3)
+      builder (~> 3.1.0)
+    activerecord (4.0.3)
+      activemodel (= 4.0.3)
+      activerecord-deprecated_finders (~> 1.0.2)
+      activesupport (= 4.0.3)
+      arel (~> 4.0.0)
+    activerecord-deprecated_finders (1.0.3)
+    activesupport (4.0.3)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    arel (4.0.2)
+    atomic (1.1.15)
+    bcrypt (3.1.7)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
+    bitcoin (0.2.0)
+      bitcoin-ruby
+    bitcoin-ruby (0.0.5)
+    builder (3.1.4)
+    capistrano (3.1.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    celluloid (0.15.2)
+      timers (~> 1.1.0)
+    coderay (1.1.0)
+    coffee-rails (4.0.1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.7.0)
+    coinbase (1.3.0)
+      hashie (>= 1.2.0)
+      httparty (>= 0.8.3)
+      money (= 5.1.1)
+      multi_json (>= 1.3.4)
+    commonjs (0.2.7)
+    configatron (3.0.1)
+    connection_pool (1.2.0)
+    daemons (1.1.9)
+    dalli (2.7.0)
+    debug_inspector (0.0.2)
+    devise (3.2.3)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+    dotenv (0.10.0)
+    em-websocket (0.5.0)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.5.3)
+    erubis (2.7.0)
+    ethon (0.6.3)
+      ffi (>= 1.3.0)
+      mime-types (~> 1.18)
+    eventmachine (1.0.3)
+    exception_notification (4.0.1)
+      actionmailer (>= 3.0.4)
+      activesupport (>= 3.0.4)
+    execjs (2.0.2)
+    ffi (1.9.3)
+    foreman (0.63.0)
+      dotenv (>= 0.7)
+      thor (>= 0.13.6)
+    formatador (0.2.4)
+    gon (4.1.0)
+      actionpack (>= 2.3.0)
+      json
+    guard (1.8.1)
+      formatador (>= 0.2.4)
+      listen (>= 1.0.0)
+      lumberjack (>= 1.0.2)
+      pry (>= 0.9.10)
+      thor (>= 0.14.6)
+    guard-livereload (1.3.0)
+      em-websocket (>= 0.2.0)
+      guard (>= 1.5.0)
+      multi_json (~> 1.0)
+    haml (4.0.3)
+      tilt
+    has_scope (0.5.1)
+    hashie (2.0.5)
+    hike (1.2.3)
+    http_parser.rb (0.5.3)
+    httparty (0.13.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    i18n (0.6.9)
+    inherited_resources (1.3.1)
+      has_scope (~> 0.5.0)
+      responders (~> 0.6)
+    jquery-rails (3.1.0)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+    json (1.8.1)
+    less (2.4.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.4.2)
+      actionpack (>= 3.1)
+      less (~> 2.4.0)
+    libv8 (3.16.14.3)
+    listen (1.2.2)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+      rb-kqueue (>= 0.2)
+    lumberjack (1.0.4)
+    mail (2.5.4)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    method_source (0.8.2)
+    mime-types (1.25.1)
+    mini_portile (0.5.2)
+    minitest (4.7.5)
+    money (5.1.1)
+      i18n (~> 0.6.0)
+    multi_json (1.8.4)
+    multi_xml (0.5.5)
+    mysql2 (0.3.15)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.8.0)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
+    oj (2.5.5)
+    orm_adapter (0.5.0)
+    pg (0.17.1)
+    polyglot (0.3.4)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-nav (0.2.3)
+      pry (~> 0.9.10)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
+    pry-stack_explorer (0.4.9)
+      binding_of_caller (>= 0.7)
+      pry (~> 0.9.11)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
+    rack (1.5.2)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rails (4.0.3)
+      actionmailer (= 4.0.3)
+      actionpack (= 4.0.3)
+      activerecord (= 4.0.3)
+      activesupport (= 4.0.3)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.0.3)
+      sprockets-rails (~> 2.0.0)
+    railties (4.0.3)
+      actionpack (= 4.0.3)
+      activesupport (= 4.0.3)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    rake (10.1.1)
+    rb-fsevent (0.9.3)
+    rb-inotify (0.9.0)
+      ffi (>= 0.5.0)
+    rb-kqueue (0.2.0)
+      ffi (>= 0.5.0)
+    rdoc (4.1.1)
+      json (~> 1.4)
+    redis (3.0.7)
+    redis-namespace (1.4.1)
+      redis (~> 3.0.4)
+    ref (1.0.5)
+    responders (0.6.5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    retriable (1.3.3)
+    sass (3.2.14)
+    sass-rails (4.0.1)
+      railties (>= 4.0.0, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0)
+    sdoc (0.4.0)
+      json (~> 1.8)
+      rdoc (~> 4.0, < 5.0)
+    sidekiq (2.17.7)
+      celluloid (>= 0.15.2)
+      connection_pool (>= 1.0.0)
+      json
+      redis (>= 3.0.6)
+      redis-namespace (>= 1.3.1)
+    skeuocard-rails (1.0.3)
+      railties (>= 3.1.0)
+    slop (3.4.7)
+    sprockets (2.11.0)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sprockets-rails (2.0.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (~> 2.8)
+    sshkit (1.3.0)
+      net-scp (>= 1.1.2)
+      net-ssh
+      term-ansicolor
+    stripe (1.10.1)
+      json (~> 1.8.1)
+      mime-types (~> 1.25)
+      rest-client (~> 1.4)
+    term-ansicolor (1.3.0)
+      tins (~> 1.0)
+    therubyracer (0.12.1)
+      libv8 (~> 3.16.14.0)
+      ref
+    thin (1.6.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 1.0.0)
+      rack (>= 1.0.0)
+    thor (0.18.1)
+    thread_safe (0.2.0)
+      atomic (>= 1.1.7, < 2)
+    tilt (1.4.1)
+    timers (1.1.0)
+    tins (1.0.0)
+    treetop (1.4.15)
+      polyglot
+      polyglot (>= 0.3.1)
+    twitter-bootstrap-rails (2.2.8)
+      actionpack (>= 3.1)
+      execjs
+      rails (>= 3.1)
+      railties (>= 3.1)
+    typhoeus (0.6.7)
+      ethon (~> 0.6.2)
+    tzinfo (0.3.38)
+    uglifier (2.4.0)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  active_model_serializers (= 0.8.4)!
+  bitcoin
+  cancan!
+  capistrano
+  cloud_assets!
+  coffee-rails (~> 4.0.0)
+  coinbase
+  configatron
+  devise
+  exception_notification
+  foreman
+  gon
+  guard-livereload
+  haml
+  has_scope
+  inherited_resources
+  jquery-rails
+  less-rails
+  mysql2
+  oj
+  pg
+  pry-nav
+  pry-rails
+  pry-stack_explorer
+  quiet_assets
+  rails (= 4.0.3)
+  retriable
+  sass
+  sass-rails (~> 4.0.0)
+  sdoc
+  sidekiq
+  skeuocard-rails
+  stripe
+  therubyracer
+  thin
+  twitter-bootstrap-rails
+  typhoeus
+  uglifier (>= 1.3.0)

@@ -1,0 +1,19 @@
+#skeuocard.credit-card-input.no-js{style: "left: -175px; position: relative;"}
+  %p.no-support-warning
+    Either you have Javascript disabled, or you're using an unsupported browser, amigo! That's why you're seeing this old-school credit card input form instead of a fancy new Skeuocard. On the other hand, at least you know it gracefully degrades...
+  %label{for: "cc_type"} Card Type
+  %select{name: "cc_type"}
+    %option{value: ""} ...
+    %option{value: "visa"} Visa
+    %option{value: "mastercard"} MasterCard
+    %option{value: "amex"} American Express
+  %label{for: "cc_number"} Card Number
+  %input#cc_number{maxlength: "19", name: "cc_number", placeholder: "XXXX XXXX XXXX XXXX", size: "19", type: "text"}/
+  %label{for: "cc_exp_month"} Expiration Month
+  %input#cc_exp_month{name: "cc_exp_month", placeholder: "00", type: "text"}/
+  %label{for: "cc_exp_year"} Expiration Year
+  %input#cc_exp_year{name: "cc_exp_year", placeholder: "00", type: "text"}/
+  %label{for: "cc_name"} Cardholder's Name
+  %input#cc_name{name: "cc_name", placeholder: "John Doe", type: "text"}/
+  %label{for: "cc_cvc"} Card Validation Code
+  %input#cc_cvc{maxlength: "3", name: "cc_cvc", placeholder: "123", size: "3", type: "text"}/

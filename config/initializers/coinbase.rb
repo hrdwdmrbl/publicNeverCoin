@@ -1,0 +1,1 @@
+$coinbase = Coinbase::Client.new(configatron.coinbase.key, configatron.coinbase.secret)

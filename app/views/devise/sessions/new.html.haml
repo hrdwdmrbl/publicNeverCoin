@@ -1,0 +1,12 @@
+= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-signin'}) do |f|
+  %h2 Sign in
+  %div
+    = f.label :email
+    %br/
+    = f.email_field :email, autofocus: true, style: "width: 100%; height: 22px; margin-top: 3px; margin-bottom: 15px;"
+  %div
+    = f.label :password
+    %br/
+    = f.password_field :password, style: "width: 100%; height: 22px; margin-top: 3px; margin-bottom: 15px;"
+  %div= f.submit "Sign in", class: "btn btn-primary btn-block"
+  = render "devise/shared/links", locals: {topbar: false}

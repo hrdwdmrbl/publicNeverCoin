@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title NeverCoin
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = include_gon
+  %body
+    = render 'shared/headers'
+    .clearfix
+    - if flash.keys.length > 0
+      - flash.each do |name, msg|
+        %div{class: "alert alert-success alert-dismissable", style: "top: 50px; position: relative;"}
+          %button{type: "button", class: "close", 'aria-hidden' => "true", data: {dismiss: "alert"}}×
+          = content_tag :div, msg, class: name
+    .container{style: "top: 80px; position: relative; padding-bottom: 50px;"}
+      .row
+        = yield
+    .footer{style: 'position: fixed; bottom: 0;display: block;width: 100%; padding: 10px;'}
+      .container
+        .footer-copyright.text-center{style: 'text-align: center;'} Copyright © 2014 Marc Beaupré
